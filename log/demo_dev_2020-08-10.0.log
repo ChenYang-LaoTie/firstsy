@@ -4092,7 +4092,7 @@ Unconditional classes:
 2020-08-10 20:02:53 DEBUG o.s.web.servlet.DispatcherServlet -- enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
 2020-08-10 20:02:53 INFO  o.s.web.servlet.DispatcherServlet -- Completed initialization in 8 ms
 2020-08-10 20:02:53 DEBUG o.s.web.servlet.DispatcherServlet -- GET "/test/config", parameters={}
-2020-08-10 20:02:53 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -- Mapped to com.example.demo.controller.testController#configTest()
+2020-08-10 20:02:53 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -- Mapped to com.example.demo.modules.test.controller.testController#configTest()
 2020-08-10 20:02:53 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -- Using 'text/html', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
 2020-08-10 20:02:53 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -- Writing ["8088---chenyang---40---chenyang is 40---534fe6e5b889f1860779318b65f5b93e<br/>8083yueyue444chenyang  (truncated)...]
 2020-08-10 20:02:53 DEBUG o.s.web.servlet.DispatcherServlet -- Completed 200 OK
@@ -5151,7 +5151,7 @@ Unconditional classes:
 2020-08-10 20:18:55 DEBUG o.s.web.servlet.DispatcherServlet -- enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
 2020-08-10 20:18:55 INFO  o.s.web.servlet.DispatcherServlet -- Completed initialization in 7 ms
 2020-08-10 20:18:55 DEBUG o.s.web.servlet.DispatcherServlet -- GET "/test/config", parameters={}
-2020-08-10 20:18:55 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -- Mapped to com.example.demo.controller.testController#configTest()
+2020-08-10 20:18:55 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping -- Mapped to com.example.demo.modules.test.controller.testController#configTest()
 2020-08-10 20:18:55 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -- Using 'text/html', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
 2020-08-10 20:18:55 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -- Writing ["8088---chenyang---40---chenyang is 40---796770ee2f32a0452edd8b2b11861553<br/>8083yueyue444chenyang  (truncated)...]
 2020-08-10 20:18:55 DEBUG o.s.web.servlet.DispatcherServlet -- Completed 200 OK

@@ -1,6 +1,6 @@
-package com.example.demo.controller;
+package com.example.demo.modules.test.controller;
 
-import com.example.demo.vo.Vv;
+import com.example.demo.modules.test.vo.Vv;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;

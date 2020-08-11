@@ -1,4 +1,4 @@
-package com.example.demo.vo;
+package com.example.demo.modules.test.vo;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
