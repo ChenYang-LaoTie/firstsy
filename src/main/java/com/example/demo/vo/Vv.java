@@ -5,7 +5,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
-@PropertySource("classpath:applicationTest.properties")
+@PropertySource("classpath:config/applicationTest.properties")
 @ConfigurationProperties(prefix = "com.qq")
 public class Vv {
 

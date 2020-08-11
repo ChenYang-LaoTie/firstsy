@@ -5155,3 +5155,11 @@ Unconditional classes:
 2020-08-10 20:18:55 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -- Using 'text/html', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
 2020-08-10 20:18:55 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -- Writing ["8088---chenyang---40---chenyang is 40---796770ee2f32a0452edd8b2b11861553<br/>8083yueyue444chenyang  (truncated)...]
 2020-08-10 20:18:55 DEBUG o.s.web.servlet.DispatcherServlet -- Completed 200 OK
+2020-08-10 20:18:55 DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -- Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1603cd68, started on Mon Aug 10 20:18:56 CST 2020
+2020-08-10 20:18:55 DEBUG o.s.c.e.PropertySourcesPropertyResolver -- Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
+2020-08-10 20:18:55 DEBUG o.s.c.s.DefaultLifecycleProcessor -- Stopping beans in phase 2147483647
+2020-08-10 20:18:55 DEBUG o.s.c.s.DefaultLifecycleProcessor -- Bean 'webServerGracefulShutdown' completed its stop procedure
+2020-08-10 20:18:55 DEBUG o.s.c.s.DefaultLifecycleProcessor -- Stopping beans in phase 2147483646
+2020-08-10 20:18:55 DEBUG o.s.c.s.DefaultLifecycleProcessor -- Bean 'webServerStartStop' completed its stop procedure
+2020-08-10 20:18:55 DEBUG o.s.j.e.a.AnnotationMBeanExporter -- Unregistering JMX-exposed beans on shutdown
+2020-08-10 20:18:55 INFO  o.s.s.c.ThreadPoolTaskExecutor -- Shutting down ExecutorService 'applicationTaskExecutor'

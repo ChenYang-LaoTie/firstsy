@@ -33,7 +33,7 @@ public class testController {
     public String random;
 
     /**
-     * 192.168.18.99:8088/test/config ---get
+     * 192.168.18.99:443/test/config ---get
      * @return
      */
 
@@ -46,6 +46,10 @@ public class testController {
         return sb.toString();
     }
 
+    /**
+     * 192.168.18.99:443/test/testDesc ---get
+     * @return
+     */
     @GetMapping("testDesc")
     @ResponseBody
     public String testDesc() {
