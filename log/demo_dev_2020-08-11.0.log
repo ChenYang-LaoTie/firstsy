@@ -26363,3 +26363,14 @@ Unconditional classes:
 2020-08-11 20:19:00 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -- Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
 2020-08-11 20:19:00 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor -- Writing [PageInfo{pageNum=1, pageSize=5, size=5, startRow=1, endRow=5, total=352, pages=71, list=Page{count=t (truncated)...]
 2020-08-11 20:19:00 DEBUG o.s.web.servlet.DispatcherServlet -- Completed 200 OK
+2020-08-11 20:19:00 DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -- Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@523524b1, started on Tue Aug 11 20:19:01 CST 2020
+2020-08-11 20:19:00 DEBUG o.s.c.e.PropertySourcesPropertyResolver -- Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
+2020-08-11 20:19:00 DEBUG o.s.c.s.DefaultLifecycleProcessor -- Stopping beans in phase 2147483647
+2020-08-11 20:19:00 DEBUG o.s.c.s.DefaultLifecycleProcessor -- Bean 'webServerGracefulShutdown' completed its stop procedure
+2020-08-11 20:19:00 DEBUG o.s.c.s.DefaultLifecycleProcessor -- Stopping beans in phase 2147483646
+2020-08-11 20:19:00 DEBUG o.s.c.s.DefaultLifecycleProcessor -- Bean 'webServerStartStop' completed its stop procedure
+2020-08-11 20:19:00 DEBUG o.s.j.e.a.AnnotationMBeanExporter -- Unregistering JMX-exposed beans on shutdown
+2020-08-11 20:19:00 DEBUG o.s.j.e.a.AnnotationMBeanExporter -- Unregistering JMX-exposed beans
+2020-08-11 20:19:00 INFO  o.s.s.c.ThreadPoolTaskExecutor -- Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-11 20:19:00 INFO  com.zaxxer.hikari.HikariDataSource -- HikariPool-1 - Shutdown initiated...
+2020-08-11 20:19:00 INFO  com.zaxxer.hikari.HikariDataSource -- HikariPool-1 - Shutdown completed.
