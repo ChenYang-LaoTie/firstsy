@@ -9,6 +9,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
 import java.util.Date;
@@ -40,6 +41,7 @@ public class CityServiceImpl implements CityService {
     }
 
     @Override
+    @Transactional
     public Result<City> insertCity(City city) {
         city.setDateCreated(new Date());
         cityDao.insertCity(city);
@@ -47,12 +49,14 @@ public class CityServiceImpl implements CityService {
     }
 
     @Override
+    @Transactional(noRollbackFor = ArithmeticException.class)//除去算数异常
     public Result<City> updateCity(City city) {
         cityDao.updateCity(city);
         return new Result<City>(Result.ResultStatus.SUCCESS.status, "Update success", city);
     }
 
     @Override
+    @Transactional
     public Result<Object> deleteCity(Integer cityId) {
         cityDao.deleteCity(cityId);
         return new Result<Object>(Result.ResultStatus.SUCCESS.status, "Delete success");
