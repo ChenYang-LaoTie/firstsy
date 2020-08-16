@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @RequestMapping("test")
 @Controller
-public class testController {
+public class TestController {
 
     @Autowired
     private Vv v;

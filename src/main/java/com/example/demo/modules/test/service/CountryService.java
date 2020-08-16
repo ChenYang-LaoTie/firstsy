@@ -8,4 +8,6 @@ public interface CountryService {
 
     Country getCountryByCountryName(String countryName);
 
+    Country mograteCountryByRedis(int countryId);
+
 }
