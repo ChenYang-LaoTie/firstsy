@@ -11,8 +11,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -68,7 +70,7 @@ public class TestController {
         modelMap.addAttribute("country", country);
         modelMap.addAttribute("cities", cities);
         modelMap.addAttribute("updateCityUri", "/api/city");
-        modelMap.addAttribute("template", "test/index");
+//        modelMap.addAttribute("template", "test/index");
         // 返回外层的碎片组装器
         return "index";
     }
@@ -78,7 +80,6 @@ public class TestController {
      */
     @GetMapping("/index2")
     public String testIndex2Page(ModelMap modelMap) {
-        modelMap.addAttribute("template", "test/index2");
         return "index";
     }
 
@@ -96,12 +97,16 @@ public class TestController {
     }
 
     /**
-     * 192.168.18.99:443/test/testDesc ---get
+     * https://192.168.18.99:443/test/testDesc?paramKey=fuck ---get
      * @return
      */
     @GetMapping("testDesc")
     @ResponseBody
-    public String testDesc() {
-        return "This is test module desc.";
+    public String testDesc(HttpServletRequest request, String paramKey, @RequestParam(value = "paramKey") String paramValue) {
+        String paramValue2 =  request.getParameter("paramKey");
+
+        return "This is test module desc." + "我" + paramValue2 + "你个" + paramKey + "TMD" + paramValue;
     }
+
+
 }

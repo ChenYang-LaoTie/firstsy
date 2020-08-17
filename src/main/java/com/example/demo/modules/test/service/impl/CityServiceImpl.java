@@ -1,5 +1,6 @@
 package com.example.demo.modules.test.service.impl;
 
+import com.example.demo.aspect.ServiceAnnotation;
 import com.example.demo.modules.common.vo.Result;
 import com.example.demo.modules.common.vo.SearchVo;
 import com.example.demo.modules.test.dao.CityDao;
@@ -23,6 +24,7 @@ public class CityServiceImpl implements CityService {
     private CityDao cityDao;
 
     @Override
+    @ServiceAnnotation(value = "bbb")
     public List<City> getCitiesByCountryId(Integer countryId) {
         return Optional.ofNullable(cityDao.getCitiesByCountryId(countryId)).orElse(Collections.emptyList());
     }
