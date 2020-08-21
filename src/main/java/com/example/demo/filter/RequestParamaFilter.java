@@ -30,7 +30,7 @@ public class RequestParamaFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         LOGGER.debug("====== Do Request Paaram Filter ======");
-        HttpServletRequest httpServletRequest = (HttpServletRequest)servletRequest;
+        HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
 
         HttpServletRequestWrapper wrapper = new HttpServletRequestWrapper(httpServletRequest) {
             @Override
@@ -46,7 +46,7 @@ public class RequestParamaFilter implements Filter {
             public String[] getParameterValues(String name) {
                 String[] values = httpServletRequest.getParameterValues(name);
                 if (values != null && values.length > 0) {
-                    for (int i = 0; i < values.length; i ++) {
+                    for (int i = 0; i < values.length; i++) {
                         values[i] = values[i].replaceAll("fuck", "***");
                     }
                     return values;

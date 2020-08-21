@@ -22,7 +22,8 @@ public class ServiceAspect {
 
     @Pointcut("@annotation(com.example.demo.aspect.ServiceAnnotation)")
     @Order(2)
-    public void servicePointCut(){}
+    public void servicePointCut() {
+    }
 
     @Before(value = "servicePointCut()")
     public void beforeService(JoinPoint joinpoint) {

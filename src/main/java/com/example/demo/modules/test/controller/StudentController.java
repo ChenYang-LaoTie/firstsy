@@ -16,6 +16,7 @@ public class StudentController {
 
     @Autowired
     private StudentService studentService;
+
     /**
      * 127.0.0.1/api/student ---- post
      * {"studentName":"hujiang1","studentCard":{"cardId":"1"}}

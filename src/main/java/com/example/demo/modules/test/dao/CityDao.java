@@ -22,19 +22,19 @@ public interface CityDao {
 
     @Select("<script>" +
             "select * from m_city" +
-                "<where>" +
-                    "<if test = 'keyWord != \"\" and keyWord !=  null'>" +
-                        "and (city_name like '%${keyWord}%' or local_city_name like '%${keyWord}%')" +
-                    "</if>" +
-                "</where>" +
-                "<choose>" +
-                    "<when test = 'orderBy != \"\" and orderBy != null'>" +
-                        "order by ${orderBy} ${sort}" +
-                    "</when>" +
-                    "<otherwise>" +
-                        "order by city_id desc" +
-                    "</otherwise>" +
-                "</choose>" +
+            "<where>" +
+            "<if test = 'keyWord != \"\" and keyWord !=  null'>" +
+            "and (city_name like '%${keyWord}%' or local_city_name like '%${keyWord}%')" +
+            "</if>" +
+            "</where>" +
+            "<choose>" +
+            "<when test = 'orderBy != \"\" and orderBy != null'>" +
+            "order by ${orderBy} ${sort}" +
+            "</when>" +
+            "<otherwise>" +
+            "order by city_id desc" +
+            "</otherwise>" +
+            "</choose>" +
             "</script>")
     List<City> getCitiesBySearchVo(SearchVo searchVo);
 

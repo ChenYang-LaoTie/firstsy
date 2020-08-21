@@ -19,6 +19,7 @@ public class CountryServiceImpl implements CountryService {
     private CountryDao countryDao;
     @Autowired
     private RedisUtils redisUtils;
+
     @Override
     public Country getCountryByCountryId(int countryId) {
         return countryDao.getCountryByCountryId(countryId);
@@ -34,7 +35,7 @@ public class CountryServiceImpl implements CountryService {
         Country country = countryDao.getCountryByCountryId(countryId);
 
         String contryKey = String.format("contry%d", countryId);
-         redisUtils.set(contryKey,country);
+        redisUtils.set(contryKey, country);
         return (Country) redisUtils.get(contryKey);
     }
 }

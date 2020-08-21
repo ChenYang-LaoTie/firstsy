@@ -41,7 +41,7 @@ public class Clazz {
     @ManyToMany(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
     @JoinTable(name = "h_clazz_student",
             joinColumns = @JoinColumn(name = "clazz_id"),
-            inverseJoinColumns = @JoinColumn(name="student_id"))
+            inverseJoinColumns = @JoinColumn(name = "student_id"))
     private List<Student> students;
 
     public int getClazzId() {

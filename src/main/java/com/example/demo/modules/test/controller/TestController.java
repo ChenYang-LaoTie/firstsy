@@ -65,7 +65,7 @@ public class TestController {
             if (resource.exists() && resource.isReadable()) {
                 return ResponseEntity.ok().header(HttpHeaders.CONTENT_TYPE, "application/octet-stream").header(HttpHeaders.CONTENT_DISPOSITION, String.format("attachment; filename=\"%S\"", resource.getFilename())).body(resource);
             }
-        }catch (MalformedURLException e) {
+        } catch (MalformedURLException e) {
             e.printStackTrace();
         }
         return null;
@@ -78,7 +78,7 @@ public class TestController {
     public String uploadFiles(@RequestParam MultipartFile[] files, RedirectAttributes redirectAttributes) {
         Boolean empty = true;
         try {
-            for (MultipartFile file:files) {
+            for (MultipartFile file : files) {
                 if (file.isEmpty()) {
                     continue;
                 }
@@ -165,11 +165,12 @@ public class TestController {
 
     /**
      * 192.168.18.99:443/test/config ---get
+     *
      * @return
      */
     @GetMapping("config")
     @ResponseBody
-    public String configTest(){
+    public String configTest() {
         StringBuffer sb = new StringBuffer();
         sb.append(port).append("---").append(name).append("---").append(age).append("---").append(desc).append("---").append(random).append("<br/>");
         sb.append(v.getPort()).append(v.getName()).append(v.getAge()).append(v.getDesc()).append(v.getRandom());
@@ -178,12 +179,13 @@ public class TestController {
 
     /**
      * https://192.168.18.99:443/test/testDesc?paramKey=fuck ---get
+     *
      * @return
      */
     @GetMapping("testDesc")
     @ResponseBody
     public String testDesc(HttpServletRequest request, String paramKey, @RequestParam(value = "paramKey") String paramValue) {
-        String paramValue2 =  request.getParameter("paramKey");
+        String paramValue2 = request.getParameter("paramKey");
 
         return "This is test module desc." + "我" + paramValue2 + "你个" + paramKey + "TMD" + paramValue;
     }

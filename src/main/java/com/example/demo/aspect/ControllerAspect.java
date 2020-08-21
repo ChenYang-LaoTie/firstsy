@@ -23,6 +23,7 @@ import java.util.Arrays;
 @Component
 public class ControllerAspect {
     private final static Logger LOGGER = LoggerFactory.getLogger(ControllerAspect.class);
+
     /**
      * 关联在方法上的切点
      * 第一个*代表返回类型不限
@@ -34,7 +35,8 @@ public class ControllerAspect {
      */
     @Pointcut("execution(public * com.example.demo.modules.*.controller.*.*(..))")
     @Order(1)
-    public void controllerPointCut() {}
+    public void controllerPointCut() {
+    }
 
     @Before(value = "com.example.demo.aspect.ControllerAspect.controllerPointCut()")
     public void beforeController(JoinPoint joinpoint) {
