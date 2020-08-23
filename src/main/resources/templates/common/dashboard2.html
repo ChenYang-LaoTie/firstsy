@@ -159,14 +159,12 @@
 $(document).ready(function() {
 	initLineGraph();
 });
-
 function initLineGraph() {
-	// 图轨数据示例
-	/* var trace_1 = [[new Date("2020-07-18"),43],[new Date("2020-07-19"),22]];
-	var trace_2 = [[new Date("2020-07-18"),43],[new Date("2020-07-19"),22]];
-	var traces = [trace_1, trace_2]; */
-	
-	var lineGraphSettings = {
+    // 图轨数据示例
+    // var trace_1 = \[\[new Date("2020-07-18"),43\],\[new Date("2020-07-19"),22\]\];
+    // var trace_2 = \[\[new Date("2020-07-18"),43\],\[new Date("2020-07-19"),22\]\];
+    // var traces = \[trace_1, trace_2\];
+    var lineGraphSettings = {
 		series : {
 			lines : {
 				show : false,
@@ -192,7 +190,7 @@ function initLineGraph() {
 			borderWidth : 1,
 			color : '#fff'
 		},
-		colors : [ "rgba(38, 185, 154, 0.38)", "rgba(3, 88, 106, 0.38)" ],
+		colors : [ "rgba(38, 185, 154, 0.38)", "rgba(3, 88, 106, 0.38)", "rgba(255, 0, 0, 0.38)" ],
 		xaxis : {
 			tickColor : "rgba(51, 51, 51, 0.06)",
 			mode : "time",
@@ -210,9 +208,7 @@ function initLineGraph() {
 		},
 		tooltip : false
 	};
-	
 	var gzbds = [];
-	
 	$.ajax({
 		url : "/api/gzbds",
 		type : "get",
@@ -238,10 +234,13 @@ function initLineGraph() {
 				}
 			});
 			
-			gzbds.push(traceDiagnosis);
-			gzbds.push(traceCure);
-			gzbds.push(traceDeath);
-			
+			// gzbds.push(traceDiagnosis);
+			// gzbds.push(traceCure);
+			// gzbds.push(traceDeath);
+			gzbds.push({label:"<div style='color: #0b2e13'>确诊数</div>", data:traceDiagnosis, lines: {show: true}});
+			gzbds.push({label:"<div style='color: #0b2e13'>治愈数</div>", data:traceCure, lines: {show: true}});
+			gzbds.push({label:"<div style='color: #0b2e13'>死亡数</div>", data:traceDeath, lines: {show: true}});
+
 			$.plot($("#chart_plot_01"), gzbds, lineGraphSettings);
 		},
 		error : function (data) {

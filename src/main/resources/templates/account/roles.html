@@ -195,13 +195,11 @@
     }
 
     function initRoles(rolesDivId) {
-        var rolesDiv = $("#" + rolesDivId);
-        rolesDiv.html("")
         $.ajax({
             url : "/api/roles",
             type : "get",
             success : function (rs) {
-
+                var rolesDiv = $("#" + rolesDivId);
                 $.each(rs, function(i, item) {
                     rolesDiv.append("<input type='checkbox' value='"
                         + item.roleId + "'/>" + item.roleName + " ");
@@ -232,7 +230,7 @@
             }
         });
         user.roles = roles;
-        console.log(user)
+
         $.ajax({
             url : "/api/user",
             type : "post",
@@ -258,7 +256,6 @@
             url : "/api/user/" + userId,
             type : "get",
             success : function (rs) {
-                console.log(rs)
                 $("#userIdForEditPage").val(rs.userId);
                 $("#userNameForEditPage").val(rs.userName);
                 $("#userImgForEditPage").val(rs.userImg);
@@ -287,7 +284,7 @@
             }
         });
         user.roles = roles;
-        console.log(user)
+
         $.ajax({
             url : "/api/user",
             type : "put",
