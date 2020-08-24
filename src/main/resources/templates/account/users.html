@@ -194,24 +194,24 @@
         }
     }
 
-    function initRoles(rolesDivId) {
-        var rolesDiv = $("#" + rolesDivId);
-        rolesDiv.html("")
-        $.ajax({
-            url : "/api/roles",
-            type : "get",
-            success : function (rs) {
-
-                $.each(rs, function(i, item) {
-                    rolesDiv.append("<input type='checkbox' value='"
-                        + item.roleId + "'/>" + item.roleName + " ");
-                });
-            },
-            error : function (data) {
-                layer.alert(data.responseText, {icon: 0});
-            }
-        });
-    }
+    // function initRoles(rolesDivId) {
+    //     var rolesDiv = $("#" + rolesDivId);
+    //     rolesDiv.html("")
+    //     $.ajax({
+    //         url : "/api/roles",
+    //         type : "get",
+    //         success : function (rs) {
+    //
+    //             $.each(rs, function(i, item) {
+    //                 rolesDiv.append("<input type='checkbox' value='"
+    //                     + item.roleId + "'/>" + item.roleName + " ");
+    //             });
+    //         },
+    //         error : function (data) {
+    //             layer.alert(data.responseText, {icon: 0});
+    //         }
+    //     });
+    // }
 
     function intAddModal() {
         $("#userNameForAddPage").val("");

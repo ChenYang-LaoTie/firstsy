@@ -26,10 +26,7 @@ public class AccountContorller {
      * 127.0.0.1/account/register ---- get
      */
     @GetMapping("/register")
-    public String registerPage() {
-        return "indexSimple";
-    }
-
+    public String registerPage() { return "indexSimple"; }
 
     /**
      * 127.0.0.1/account/users ---- get
@@ -38,4 +35,27 @@ public class AccountContorller {
     public String usersPage() {
         return "index";
     }
+
+    /**
+     * 127.0.0.1/account/roles ---- get
+     */
+    @GetMapping("/roles")
+    public String rolesPage() {
+        return "index";
+    }
+
+    /**
+     * 127.0.0.1/account/resources ---- get
+     */
+    @GetMapping("/resources")
+    public String resourcesPage() {
+        return "index";
+    }
+
+    /**
+     * 127.0.0.1/account/profile ---- get
+     */
+    @GetMapping("/profile")
+    public  String profilePage() { return "index"; }
+
 }

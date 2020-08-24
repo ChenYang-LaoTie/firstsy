@@ -8,6 +8,7 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * @Description: UserController
@@ -75,6 +76,20 @@ public class UserController {
         return userService.getUserByUserId(userId);
     }
 
+    /**
+     * 127.0.0.1/api/userImg ---- post
+     */
+    @PostMapping(value = "/userImg", consumes = "multipart/form-data")
+    public Result<String> uploadFile(@RequestParam MultipartFile file) {
+        return userService.uploadUserImg(file);
+    }
 
+    /**
+     * 127.0.0.1/api/profile ---- put
+     */
+    @PutMapping(value = "/profile", consumes = "application/json")
+    public Result<User> updateUserProfile(@RequestBody User user) {
+        return userService.updateUserProfile(user);
+    }
 }
 

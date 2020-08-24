@@ -4,6 +4,7 @@ import com.example.demo.modules.account.entity.User;
 import com.example.demo.modules.common.vo.Result;
 import com.example.demo.modules.common.vo.SearchVo;
 import com.github.pagehelper.PageInfo;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * @Description: UserService
@@ -23,4 +24,9 @@ public interface UserService {
     Result<Object> deleteUser(Integer userId);
 
     User getUserByUserId(Integer userId);
+
+    Result<String> uploadUserImg(MultipartFile file);
+
+    Result<User> updateUserProfile(User user);
+
 }
