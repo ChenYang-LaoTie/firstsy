@@ -23,6 +23,7 @@ public interface UserDao {
 
 
     @Select("select * from user where user_name = #{userName}")
+    @ResultMap(value = "userResults")
     User getUserByUserName(String userName);
 
     @Select("<script>" +

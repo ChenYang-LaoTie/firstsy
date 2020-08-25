@@ -335,7 +335,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
         initFileInput();
-        initUserProfile(5);
+        initUserProfile($("userId").val());
 
         $("#editProfile").bind("click", function(){
             editProfile();

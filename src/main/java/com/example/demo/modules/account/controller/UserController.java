@@ -5,6 +5,7 @@ import com.example.demo.modules.account.service.UserService;
 import com.example.demo.modules.common.vo.Result;
 import com.example.demo.modules.common.vo.SearchVo;
 import com.github.pagehelper.PageInfo;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -64,6 +65,7 @@ public class UserController {
      * 127.0.0.1/api/user/1 ---- delete
      */
     @DeleteMapping("/user/{userId}")
+    @RequiresPermissions(value = "/api/user")
     public Result<Object> deleteUser(@PathVariable Integer userId) {
        return userService.deleteUser(userId);
     }
