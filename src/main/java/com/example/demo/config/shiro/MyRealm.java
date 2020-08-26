@@ -51,7 +51,6 @@ public class MyRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         String userName = (String) authenticationToken.getPrincipal();
         User user =  userService.getUserByUserName(userName);
-
         if (null == user) {
             throw new UnknownAccountException("The account do not exist.");
         }
