@@ -1,0 +1,106 @@
+一，选择题
+	以下哪个不是python解释器	B
+		CPython
+		IPython
+		Jython
+		py
+	下列哪个表达式在Python中是非法的？	C
+		x = y = z = 1
+		x = (y = z + 1)
+		x, y = y, x
+		x += y
+	print("%d %% %d"%(3, 5)) 输出结果是？	A
+		3 % 5
+		3 %% 5
+		2
+		1
+	“今年第一季度GDP提高了x%”，x为float值，格式化字符串，x保留两位小数，下面哪个是正确的？		C
+		print("今年第一季度GDP提高了%.2f"%(22.234,))
+		print("今年第一季度GDP提高了%.2f%"%(22.234,))
+		print("今年第一季度GDP提高了%.2f%%"%(22.234,))
+		print("今年第一季度GDP提高了{0}%".format(22.234))
+	l = ["cdsa", 32, 33.2, None, True];l.pop();print(l);打印结果是：	    C
+		["cdsa", 32, 33.2, True]
+		["cdsa", 32, None, True]
+		["cdsa", 32, 33.2, None]
+		[32, 33.2, None, True]
+	print(15 // 2);	  	B	
+		1
+		7
+		7.5
+		8
+	下面哪个不是 python 的数据类型	D
+		int
+		str
+		set
+		double
+	*args 代表什么参数		B	
+		位置参数
+		可变参数
+		可变关键字参数
+		命名关键字参数
+	函数多个返回值，实际上返回的是什么数据类型？	B
+		list
+		set
+		tuple
+		dict
+	安装Django2.0.7版本，使用的什么命令？		D
+		pip install django
+		pip install django=2.0.7
+		pip install django==2.0.7
+		pip install django version=2.0.7
+
+二、填空题
+	字符串前面添加u、r、b分别代表什么？
+	u：表示unicode字符串
+	r：表示非转义的原始字符串
+	b：表示后面字符串是bytes类型
+
+	requests模块请求远程服务器，如何设置相应编码？
+	#调用request模块
+	import request
+	#访问需要访问的页面
+	r = request.get(url)
+	#在输出结果前先设置内容编码
+	r.encoding = "utf-8"
+	print(r.text)
+
+	windows下执行python的方式；
+	在配置的环境变量的情况下直接控制台输入python
+	创建python package，会自动生成什么文件？
+	__init__py
+
+	python变量作用域有哪些？
+	L：local，局部作用域，即函数中定义的变量
+	E：enclosing，嵌套的父级函数的局部作用域，即包含此函数的上级函数的局部作用域，但不是全局的
+	G：globa，全局变量，就是模块级别定义的变量； B：built-in，系统固定模块里面的变量，比如int, bytearray等。 搜索变量的优先级顺序依次是：作用域局部>外层作用域>当前模块中的全局>python内置作用域，也就是LEGB
+三、问答题
+	python命名规则？
+	模块：模块尽量使用小写类名，首字母保持小写，尽量不要使用下划线(除非多个单词，且数量不多的情况)
+	类名：类名使用驼峰命名风格，首字母大写，私有类可以用一个下滑线开头
+	函数：函数名一律小写，如有多个单词，用下滑线隔开，私有函数前加一个下滑线
+	变量：变量名尽量小写，如有多个单词，用下滑线隔开
+	常量：常量名用全大写，如有多个单词，用下滑线隔开
+
+	set删除操作中，pop、remove的区别？
+	pop()可删除任意位置的元素并将其返回, 只需在括号内指定要删除元素的索引即可, 当括号内为空时则删除该列表最后一个元素并将其返回.
+	remove()方法可根据值删除元素, 若不知所要删除元素在列表中的位置时可用remove()删除, 需要注意的是remove()所删除的元素是列表中第一个配对的值
+
+	list使用+=和append函数的区别？
+	结论：使用append()添加后，是在列表原列表t中添加，而不是t1
+	而使用+=添加后，是在列表t2中添加，相当于在t中添加的结果重新放到了一个新的列表中，而原列表不变
+
+	使用bs4解析响应内容，获取某div（class为aaa）下所有span节点；
+	
+	简述Django操作流程、组件的作用；
+
+四、编程题
+	定义一个函数，接受 0 个或多个参数，返回累计乘积；
+	def sy(*num):
+	    n = 1
+	    for x in num:
+	        n = n * x
+	    return n
+	定义一个函数，去掉字符串前后的空格；
+	def sy(s):
+	    return s.strip();
